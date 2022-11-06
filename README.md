@@ -1,5 +1,4 @@
 # All-about-ESP8266
-[ESP8266.docx](https://github.com/NERDS-PROJECTS/All-about-ESP8266/files/9945195/ESP8266.docx)
 
 The ESP8266 is a low-cost Wi-Fi microchip, with built-in TCP/IP networking software, and
 microcontroller capability, produced by Espressif Systems in Shanghai, China.
@@ -24,8 +23,17 @@ ESP8266-IC
 | Power |	3.3 V DC |
 | Successor |	ESP32 |
 
-The ESP8266 modules are commonly found in the following IoT devices:
+
+## ESP8266 Functions
+ESP8266 has many applications when it comes to the IoT. Here are just some of the functions the chip is used for:
+
+* Networking: The module’s Wi-Fi antenna enables embedded devices to connect to routers and transmit data
+* Data Processing: Includes processing basic inputs from analog and digital sensors for far more complex calculations with an RTOS or Non-OS SDK
+* P2P Connectivity: Create direct communication between ESPs and other devices using IoT P2P connectivity
+* Web Server: Access pages written in HTML or development languages
+
 ## ESP8266 Applications
+The ESP8266 modules are commonly found in the following IoT devices:
 * Smart security devices, including surveillance cameras and smart locks
 * Smart energy devices, including HVACs and thermostats 
 * Smart industrial devices, including Programmable Logic Controllers (PLCs) 
@@ -49,6 +57,41 @@ These are the complete IoT MCU development boards that have the modules preinsta
   * Flash Memory 
 
 Many international markets require shielded Wi-Fi devices, as Wi-Fi produces considerable Radio Frequency Interference (RFI), and shielding minimizes this interference. This should, therefore, be a key consideration for all developers and embedded-device manufacturers.
+
+## Manufacturers of Modules and Boards
+Some of the largest manufacturers of ESP8266 modules and development boards are:
+
+* Espressif 
+* Ai-Thinker
+* WeMos
+* Adafruit
+* Olimex
+
+## ESP8266 Modules
+
+* Espressif Systems
+The Espressif Systems esp8266 is available in the following modules:
+
+| Model | Antennae | Dimensions | GPIO & ADC Pins | Flash | LEDs | Shielded |
+|--|--|--|--|--|--|--|
+| ESP-WROOM-02 | PCB trace | 18 × 20 | 18| 2 MiB | No | Yes |
+| ESP-WROOM-02D | PCB trace | 18 × 20 | 18 | 2 MiB | No | Yes|
+| ESP-WROOM-02U | U.FL socket | 18 × 20 | 18 | 2 MiB | No | Yes |
+| ESP-WROOM-S2 | PCB trace | 16 × 23 | 20 | 2 MiB | No | Yes |
+
+* Ai-Thinker
+Current Ai-Thinker esp8266 modules are the following:
+
+| Model | Antennae | Dimensions | GPIO & ADC Pins | Flash | LEDs | Shielded |
+|--|--|--|--|--|--|--|
+| ESP-01S | PCB trace | 14.4 × 24.7 | 6 | 1 MiB | Yes | No |
+| ESP-01M | PCB trace | 18 × 18 | 16 | 1 MiB | No | Yes |
+|ESP-07S | U.FL socket | 17 × 16 | 14 | 4 MiB | No | Yes |
+| ESP-08S | None | 17 × 16 | 10 | 4 MiB | No | Yes |
+| ESP-12F | PCB trace | 24 × 16 | 20 | 4 MiB | Yes |Yes |
+| ESP-12S | PCB trace | 24 × 16 | 14 |4 MiB | Yes |Yes |
+
+Older and discontinued models include: ESP-01, ESP-02, ESP-03, ESP-04, ESP-05, ESP-06, ESP-7, ESP-08, ESP-09, ESP-10, ESP-11, ESP-12, ESP-12E, and ESP-13 and ESP-14.
 
 ## SDKs
 
@@ -81,7 +124,7 @@ As the above comparisons show, there are many options available with ESP8266 IoT
 #### Popular ESP8266 Modules
 
 ###### Ai-Thinker ESP-01
-![image](https://user-images.githubusercontent.com/116709965/200157195-dfe93292-01e6-43a9-9fca-f1cca79f7e5d.png)
+![image](https://user-images.githubusercontent.com/116709965/200157781-6454b9c1-e017-438c-8828-52bf4dce466a.png)
 
 The ESP-01 is one of the biggest selling IoT Wi-Fi modules on the market. It’s widely used in smart home and networking projects.
 
@@ -91,9 +134,8 @@ A common complaint with this board is that the pin posts make it difficult to pl
 
 There are two versions available, one with 500kb of flash and the other with 1Mbit of flash.
 
-
 ###### Ai-Thinker ESP-05
-![image](https://user-images.githubusercontent.com/116709965/200157239-54848747-0949-41d3-a2fe-01b2df6a20a6.png)
+![image](https://user-images.githubusercontent.com/116709965/200157770-7e985528-eb5b-4984-8050-4f965e52ea6c.png)
 
 This module was developed to provide Wi-Fi connectivity for MCUs such as Raspberry Pi and PIC and other Wi-Fi projects. It, therefore, does not have GPIOS.
 
@@ -101,7 +143,7 @@ It fits into a breadboard without any problems, but there are some complaints ab
 
 
 ###### Ai-Thinker ESP-12
-![image](https://user-images.githubusercontent.com/116709965/200157227-3ae50b77-0b22-492a-a291-b0091654c259.png)
+![image](https://user-images.githubusercontent.com/116709965/200157760-37849e83-5ce9-4f20-bea1-01f03f12c6ba.png)
 
 This is a more fully featured module with 11 GPIO pins, an ADC, 4Mbits of flash, and 10-bit resolution. However, the module is not breadboard friendly, meaning you’ll need to use an adaptor. 
 
@@ -110,20 +152,19 @@ There are two versions available, ESP-12F, which has 20 GPIOS and ESP-12S, which
 #### Popular ESP8266 Boards
 
 ###### Espressif NodeMCU module V1.0
-![image](https://user-images.githubusercontent.com/116709965/200157217-d4e5f11e-5022-490a-9396-ed04838a88be.png)
+![image](https://user-images.githubusercontent.com/116709965/200157731-1d58a8c9-5607-4d7b-b118-3c9c023a2998.png)
 
 This board has the ESP-12E module and comes with 4 Mbits of flash and features a row of pins on each side of the breadboard. The board comes with four communication interfaces: SPI, I2C, UART, and I2S, with 16 GPIO and one ADC. The RAM is 160KB, divided into 64KB for instruction and 96KB for data.
 
-
 ###### Adafruit Huzzah ESP8266 Breakout
-![image](https://user-images.githubusercontent.com/116709965/200157212-3ca20349-b292-43c3-8398-b61094881157.png)
+![image](https://user-images.githubusercontent.com/116709965/200157721-87644ca3-6db2-4387-9054-a66a6c4a8a79.png)
 
 This microcontroller operates at a logic level of 3.3V and is clocked at 80MHz. It comes programmed with the Lua Interpreter, which makes programming simple, with no boot loading required. Alternatively, you can use the Arduino IDE to program it.
 
 There is an onboard CP2104 USB-to-serial converter, therefore you can simply plug it into your computer and upload your code. The board is also lightweight and small, so it’s useful for projects with space constraints. 
 
-
 ###### WeMos D1 Mini
+![image](https://user-images.githubusercontent.com/116709965/200157713-4086310f-c855-4f03-b637-39e2f9bad5f8.png)
 
 The WeMos D1 Mini was designed to be one of the smallest possible development boards for the ESP8266 module. It has a micro USB connection and compatibility with several firmware options.
 
