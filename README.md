@@ -24,72 +24,104 @@ ESP8266-IC
 | Power |	3.3 V DC |
 | Successor |	ESP32 |
 
+The ESP8266 modules are commonly found in the following IoT devices:
+## ESP8266 Applications
+* Smart security devices, including surveillance cameras and smart locks
+* Smart energy devices, including HVACs and thermostats 
+* Smart industrial devices, including Programmable Logic Controllers (PLCs) 
+* Smart medical devices, including wearable health monitors
 
-![image](https://user-images.githubusercontent.com/116709965/200155376-093cb2a3-8f5f-46d6-8de5-3c066668db0f.png)
+## Chip versus Modules versus Development Boards
+As discussed above, the ESP8266 is just the name of the chip. There are essentially three formats you can buy this in:
 
-The pinout is as follows for the common ESP-01 module:
-1.	GND, Ground (0 V)
-2.	GPIO 2, General-purpose input/output No. 2
-3.	GPIO 0, General-purpose input/output No. 0
-4.	RX, Receive data in, also GPIO3
-5. VCC, Voltage (+3.3 V; can handle up to 3.6 V)
-6. RST, Reset
-7. CH_PD, Chip power-down
-8. TX, Transmit data out, also GPIO1
+* ESP8266 Chip: 
+This is the basic chip manufactured by Espressif, which comes unshielded and needs to be soldered onto a module. This is unsuitable for most users, apart from perhaps volume device manufacturers that can factor this into the production process under the unit cost of a module.
+* ESP8266 Modules: 
+These are the surface-mountable modules that contain the chip, which are ready to be mounted onto an MCU, produced by Espressif, Ai-Thinker and certain other manufacturers. They are usually shielded and pre-approved by the FCC for use. This means they’re a good option for device manufacturers looking to scale production.
+* ESP8266 Development Boards: 
+These are the complete IoT MCU development boards that have the modules preinstalled. They’re used for developers and manufacturers to create prototypes during the design stage, before they start production. Development boards are produced by several different manufacturers and the specifications differ between models. Some core specifications to be aware of when assessing ESP8266 IoT development board options include:
 
-In October 2014, Espressif Systems released a software development kit (SDK) for programming
-the chip directly, which removed the need for a separate microcontroller.Since then, there have
-been many official SDK releases from Espressif; Espressif maintains two versions of the SDK —
-one that is based on FreeRTOS and the other based on callbacks.
+  * GPIO pins
+  * ADC pins
+  * Wi-Fi antennas
+  * LEDs
+  * Shielding*
+  * Flash Memory 
 
-### SDKs
+Many international markets require shielded Wi-Fi devices, as Wi-Fi produces considerable Radio Frequency Interference (RFI), and shielding minimizes this interference. This should, therefore, be a key consideration for all developers and embedded-device manufacturers.
 
-An alternative to Espressif's official SDK is the open-source ESP-Open-SDK that is based on the GNU Compiler Collection (GCC) toolchain, maintained by Max Filippov.Another alternative is the "Unofficial Development Kit" by Mikhail Grigorev.
+## SDKs
 
-Other SDKs, mostly open-source, include:
+There is now a wide range of software development kits (SDKs) available, enabling developers to program the chip directly without using a separate MCU. 
 
-* Arduino — A C++-based firmware. With this core, the ESP8266 CPU and its Wi-Fi components can be programmed like any other Arduino device. The ESP8266 Arduino Core is available through GitHub (https://github.com/esp8266/Arduino).
+Espressif provides two official SDKs for use with ESP8266, which are:
 
-* ESP8266 BASIC (http://www.esp8266basic.com/) — An open-source BASIC-like interpreter specifically tailored for the Internet of Things (IoT). Self-hosting browser-based development environment.
+* A FreeRTOS based SDK
+* A Non-OS SDK
+Aside from the Espressif options, there are plenty of commercial and open-source SDKs on the market, including:
 
-* ESP Easy — Developed by home automation enthusiasts.
+* ESP Arduino Core – C++ based firmware
+* ESP8266 BASIC – Open-source BASIC-like environment for IoT
+* ESP-Open-RTOS – FreeRTOS open-source framework for ESP8266
+* ESP-Open-SDK – Open integrated SDK for ESP8266
+* Espruino – Javascript SDK and firmware
+* Micropython – Python for embedded devices
+* Moddable SDK – Javascript SDK
+* Mongoose OS – C or Javascript open-source OS
+* NodeMCU – Open-source Lua based firmware, similar to Node.js
+* Sming – Asynchronous C/C++ framework
+* uLisp – Lisp-based framework
+* ZBasic – Visual Basic 6 adapted for ESP8266
+* Zerynth – Python framework for IoT
 
-* ESPHome (https://esphome.io/index.html) — ESPHome is a system to control your	ESP8266 Die shot ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through home automation systems.
+## Which is the best ESP8266 Module or Development Board for IoT?
 
-* Tasmota (https://github.com/arendst/Sonoff-Tasmota) - open-source firmware, for home automation.
+As the above comparisons show, there are many options available with ESP8266 IoT boards and modules. To help you with your decision making, we’ve summarized some of the most popular below.
 
-* ESP-Open-RTOS (https://github.com/SuperHouse/esp-open-rtos) — Open-source FreeRTOS-based ESP8266 software framework.
+#### Popular ESP8266 Modules
 
-* ESP-Open-SDK (https://github.com/pfalcon/esp-open-sdk) — Free and open (as much as possible) integrated SDK for ESP8266/ESP8285 chips.
+###### Ai-Thinker ESP-01
 
-* Espruino — An actively maintained JavaScript SDK and firmware, closely emulating Node.js. Supports a few MCUs, including the ESP8266.
+The ESP-01 is one of the biggest selling IoT Wi-Fi modules on the market. It’s widely used in smart home and networking projects.
 
-* ESPurna (https://github.com/xoseperez/espurna/wiki) — Open-source ESP8285/ESP8266 firmware.
+The default AT firmware enables it to be used in combination with an Arduino. However, you can easily update the firmware with a USB-to-ESP-01 adaptor module.
+
+A common complaint with this board is that the pin posts make it difficult to plug it directly into a breadboard, but this can be easily overcome by building or buying an adaptor module.
+
+There are two versions available, one with 500kb of flash and the other with 1Mbit of flash.
 
 
-* Forthright (https://github.com/niclash/forthright) — Port of Jones Forth to the ESP8266 microcontroller.
+###### Ai-Thinker ESP-05
+This module was developed to provide Wi-Fi connectivity for MCUs such as Raspberry Pi and PIC and other Wi-Fi projects. It, therefore, does not have GPIOS.
 
-* MicroPython (https://micropython.org/) — A port of MicroPython (an implementation of Python for embedded devices) to the ESP8266 platform.
+It fits into a breadboard without any problems, but there are some complaints about being stuck with the factory set firmware unless you’re prepared to do some serious modifications.
 
-* Moddable SDK (https://github.com/Moddable-OpenSource/moddable#supported-hardware) — includes JavaScript language and library support for the ESP8266
-* Mongoose OS — An open-source operating system for connected products. Supports ESP8266 and ESP32. Develop in C or JavaScript.
 
-* NodeMCU — A Lua-based firmware.
+###### Ai-Thinker ESP-12
 
-* PlatformIO (https://platformio.org/platforms/espressif8266) — A cross-platform IDE and unified debugger, which sits
-on top of Arduino code and libraries.
+This is a more fully featured module with 11 GPIO pins, an ADC, 4Mbits of flash, and 10-bit resolution. However, the module is not breadboard friendly, meaning you’ll need to use an adaptor. 
 
-* Punyforth (https://github.com/zeroflag/punyforth) — Forth-inspired programming language for the ESP8266.
+There are two versions available, ESP-12F, which has 20 GPIOS and ESP-12S, which has 14.
 
-* Sming (https://github.com/SmingHub/Sming) — An actively developed asynchronous C/C++ framework with superb performance and multiple network features.
+#### Popular ESP8266 Boards
 
-uLisp (http://www.ulisp.com/show?21T5) — A version of the Lisp programming language specifically designed to run on processors with a limited amount of RAM.
+###### Espressif NodeMCU module V1.0
 
-ZBasic for ESP8266 (http://www.zbasic.net) — A subset of Microsoft's widely-used Visual Basic 6, which has been adapted as a control language for the ZX microcontroller family and the ESP8266.
+This board has the ESP-12E module and comes with 4 Mbits of flash and features a row of pins on each side of the breadboard. The board comes with four communication interfaces: SPI, I2C, UART, and I2S, with 16 GPIO and one ADC. The RAM is 160KB, divided into 64KB for instruction and 96KB for data.
 
-Zerynth — IoT framework for programming ESP8266 and other microcontrollers in Python. IOTBAH - is An operating system (OS) for Espressif ESP8266
 
-### References
+###### Adafruit Huzzah ESP8266 Breakout
+
+This microcontroller operates at a logic level of 3.3V and is clocked at 80MHz. It comes programmed with the Lua Interpreter, which makes programming simple, with no boot loading required. Alternatively, you can use the Arduino IDE to program it.
+
+There is an onboard CP2104 USB-to-serial converter, therefore you can simply plug it into your computer and upload your code. The board is also lightweight and small, so it’s useful for projects with space constraints. 
+
+
+###### WeMos D1 Mini
+
+The WeMos D1 Mini was designed to be one of the smallest possible development boards for the ESP8266 module. It has a micro USB connection and compatibility with several firmware options.
+
+## References
  
 1.	"ESP8266 Overview" (http://espressif.com/en/products/hardware/esp8266ex/overview). Espressif Systems. Retrieved 2017-10-02.
 2.	Brian Benchoff (August 26, 2014). "New Chip Alert: The ESP8266 WiFi Module (It's $5)" (http://hackaday.com/2014/08/26/new-chi p-alert-the-esp8266-wifi-module-its-5/). Hackaday. Retrieved 2015-06-24.
