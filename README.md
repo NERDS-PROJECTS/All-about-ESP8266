@@ -11,7 +11,9 @@ The ESP8285 is a similar chip with a built-in 1 MiB flash memory, allowing the d
 
 These microcontroller chips have been succeeded by the ESP32 family of devices.
 
+![image](https://user-images.githubusercontent.com/116709965/200156346-fc167358-d259-45a1-ab5f-8ce0dde63632.png)
 
+ESP8266-IC
 | List 1 | List 2 |
 | --- | --- |
 | Manufacturer | Espressif Systems |
