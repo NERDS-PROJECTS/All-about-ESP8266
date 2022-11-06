@@ -81,6 +81,7 @@ As the above comparisons show, there are many options available with ESP8266 IoT
 #### Popular ESP8266 Modules
 
 ###### Ai-Thinker ESP-01
+![image](https://user-images.githubusercontent.com/116709965/200157195-dfe93292-01e6-43a9-9fca-f1cca79f7e5d.png)
 
 The ESP-01 is one of the biggest selling IoT Wi-Fi modules on the market. It’s widely used in smart home and networking projects.
 
@@ -92,12 +93,15 @@ There are two versions available, one with 500kb of flash and the other with 1Mb
 
 
 ###### Ai-Thinker ESP-05
+![image](https://user-images.githubusercontent.com/116709965/200157239-54848747-0949-41d3-a2fe-01b2df6a20a6.png)
+
 This module was developed to provide Wi-Fi connectivity for MCUs such as Raspberry Pi and PIC and other Wi-Fi projects. It, therefore, does not have GPIOS.
 
 It fits into a breadboard without any problems, but there are some complaints about being stuck with the factory set firmware unless you’re prepared to do some serious modifications.
 
 
 ###### Ai-Thinker ESP-12
+![image](https://user-images.githubusercontent.com/116709965/200157227-3ae50b77-0b22-492a-a291-b0091654c259.png)
 
 This is a more fully featured module with 11 GPIO pins, an ADC, 4Mbits of flash, and 10-bit resolution. However, the module is not breadboard friendly, meaning you’ll need to use an adaptor. 
 
@@ -106,11 +110,13 @@ There are two versions available, ESP-12F, which has 20 GPIOS and ESP-12S, which
 #### Popular ESP8266 Boards
 
 ###### Espressif NodeMCU module V1.0
+![image](https://user-images.githubusercontent.com/116709965/200157217-d4e5f11e-5022-490a-9396-ed04838a88be.png)
 
 This board has the ESP-12E module and comes with 4 Mbits of flash and features a row of pins on each side of the breadboard. The board comes with four communication interfaces: SPI, I2C, UART, and I2S, with 16 GPIO and one ADC. The RAM is 160KB, divided into 64KB for instruction and 96KB for data.
 
 
 ###### Adafruit Huzzah ESP8266 Breakout
+![image](https://user-images.githubusercontent.com/116709965/200157212-3ca20349-b292-43c3-8398-b61094881157.png)
 
 This microcontroller operates at a logic level of 3.3V and is clocked at 80MHz. It comes programmed with the Lua Interpreter, which makes programming simple, with no boot loading required. Alternatively, you can use the Arduino IDE to program it.
 
